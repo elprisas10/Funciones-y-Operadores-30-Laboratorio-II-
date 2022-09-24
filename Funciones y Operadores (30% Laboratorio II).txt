@@ -1,0 +1,34 @@
+---Jonathan Elias Gamez Larin
+USE Northwind;
+
+---Literal 1
+SELECT DATEDIFF(Day,OrderDate,RequiredDate) Dias_De_Diferencias
+FROM Orders;
+
+---Literal 2
+SELECT MIN(OrderDate) Fecha_1, MAX (OrderDate) Fecha_Reciente, COUNT (*) N_Clientes
+FROM Orders;
+
+---Literal 3
+SELECT CompanyName
+FROM Customers WHERE City NOT LIKE 'México%';
+
+---Literal 4
+SELECT EmployeeID
+FROM Orders
+WHERE EmployeeID >=5 AND EmployeeID <=10;
+
+SELECT EmployeeID
+FROM Orders
+WHERE EmployeeID BETWEEN 5 AND 10;
+
+SELECT EmployeeID
+FROM Orders
+WHERE EmployeeID IN(5,6,7,8,9,10);
+
+---Literal 5
+SELECT OrderID, OrderDate
+FROM Orders
+WHERE YEAR(OrderDate) LIKE '1998%'
+
+
